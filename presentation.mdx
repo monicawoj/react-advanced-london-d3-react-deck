@@ -1,9 +1,18 @@
+import { Appear, Notes } from "mdx-deck";
 import { Split, FullScreenCode } from "mdx-deck/layouts";
-import { Appear } from "mdx-deck";
 
 export { prism as theme } from "mdx-deck/themes";
 
-# An Introduction to MDX-Deck
+# Hooked on D3
+
+## Creating Animated Ch(art)s with D3 and React Hooks
+
+<Notes>
+
+- Only visible in presenter mode
+- Markdown syntax can be used with empty lines around the content
+
+</Notes>
 
 ---
 
@@ -17,7 +26,7 @@ https://mdxjs.com/
 
 ---
 
-export default FullScreenCode;
+<FullScreenCode>
 
 ```jsx
 import Accordian from '../components/Accordian'
@@ -28,6 +37,8 @@ It's rendered inside our MDX document.
 
 <div>test test <span style={{ color: blue}}>blue</span></div>
 ```
+
+</FullScreenCode>
 
 ---
 
@@ -66,6 +77,8 @@ Sweet!
 
 import App from "./components/App/App";
 
+export default Split;
+
 ### React Components inside Markdown
 
 <App />
@@ -94,3 +107,7 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 ## In fact...
 
 This is an mdx-deck presentation.
+
+```
+
+```

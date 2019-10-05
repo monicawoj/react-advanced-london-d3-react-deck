@@ -20,7 +20,6 @@ import "./App.css";
 //TODO: yaxis starts with ugly 0
 //TODO: refactor code, can i move any of it to a seperate file?
 //TODO: test responsiveness when i want to add one to the side (to see how languages compare)
-//TODO: make presentation! using mdx-deck
 
 const App = () => {
   const [xAxisType, setXAxisType] = useState("QWERTY");

@@ -1,7 +1,21 @@
-import { Appear, Notes } from "mdx-deck";
-import { Split, FullScreenCode } from "mdx-deck/layouts";
+import { Appear, Notes, Image } from "mdx-deck";
+import {
+  Split,
+  SplitRight,
+  FullScreenCode,
+  Horizontal
+} from "mdx-deck/layouts";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import { LiveCode } from "mdx-deck-live-code";
+import { book } from "mdx-deck/themes";
+import nightOwl from "prism-react-renderer/themes/nightOwl";
 
-export { prism as theme } from "mdx-deck/themes";
+import Disappear from "components/deck/Disappear";
+
+export const theme = {
+  ...book,
+  codeSurfer: { ...nightOwl, showNumbers: false }
+};
 
 # Hooked on D3
 
@@ -19,72 +33,135 @@ export { prism as theme } from "mdx-deck/themes";
 # Hi, I'm Monica
 
 <Appear>
-  <h2>Netguru</h2>
-  <h2>Polish/American</h2>
-  <h2>outdoors</h2>
+  <div>
+    <img src="./images/netguru.png" />
+  </div>
+  <h2>Polish 🇵🇱 /American 🇺🇸</h2>
+  <h2>Outdoors</h2>
   <h2>some other emoji about me</h2>
 </Appear>
 
 ---
 
-## There has to be a better way
-
-(UPenn logo)
+<div>
+  <img src="./images/boring_chart.gif" />
+  <Appear>
+    <h2>There has to be a better way</h2>
+  </Appear>
+</div>
 
 <Notes>
 
-- personal story about my starts in programming through D3
+- my journey with programming began in college when I was a research assistant tasked with showing some data..
+- I thought, there has to be something better than this...
 
 </Notes>
 
 ---
 
-export default Split;
-
-<Appear>
 <div>
-  <h2>React</h2>
-  <h2>D3</h2>
-  <h2>Cooking at high end restaurants...</h2>
+  <img src="./images/d3_gallery.png" width={900} />
 </div>
 
-<h1>?</h1>
+<Notes>
 
+- and there was!
+- luckily I was thinking out loud and happened to have a computer science roommate who pointed me in the direction of this site
+- since then, I've been hooked on D3... and today I'm hooked on D3 and React together :)
+
+</Notes>
+
+---
+
+<Appear>
+  <h1>⚛️</h1>
+  <div>
+    <img src="./images/d3-icon.png" height={90} />
+  </div>
+  <h1>👨‍🍳 🍳 👩‍🍳</h1>
+  <h1>?</h1>
 </Appear>
 
 <Notes>
 
+- so today, I want to chat about React and the data visualization lib D3, but also...
 - And today, other than talking to you about code, I’ll be sharing some secrets of the art of cooking at a 5-star restaurant…
 - So keep that in mind
-- But before we jump right into what the title of this presentation promised, “Creating Animated Ch(art)s with D3 and React hooks”, I think we need to take a step back and focus on one word: Animated
 
 </Notes>
 
 ---
 
-# Creating Animated Charts with D3 and React Hooks
+import BoldingText from "components/deck/BoldingText";
 
----
-
-# Creating **Animated** Charts with D3 and React Hooks
-
----
-
-# Why animation?
+<BoldingText />
 
 <Notes>
 
-- Time and Change = Transformation;
-  - Actually Change / Time = Transformation
-- gives the user continuity
-- brings something to life
-- directs their attention
+- But before we jump right into what the title of this presentation promised, “Creating Animated Ch(art)s with D3 and React hooks”, I think we need to take a step back and focus on one word: Animated
+- So what is animation but...
+
+</Notes>
+
+---
+
+<h2>
+  <strike>Time and Change</strike> Change / Time
+</h2>
+
+<Notes>
+
+- Time and Change = Transformation
+- Actually Change / Time = Transformation
+
+</Notes>
+
+---
+
+## Why animate?
+
+<ul>
+  <Appear>
+    <li>🔅 🔆 continuity</li>
+    <li>🔄 action / reaction</li>
+    <li>🕓 motion</li>
+  </Appear>
+</ul>
+
+<Notes>
+
+- provides a visual cue of continuity; it's one object
 - A reaction to our action (communication of cause-and-effect)
-- A clue that ‘something is happening’ (e.g. Loading component)
-- shows connection / relationship with time
+- Motion: A clue that ‘something is happening’ (e.g. Loading component); relationship with time
+
+</Notes>
+
+---
+
+import { Circles, AnimatedCircle } from "components/Circle";
+
+<h2>
+  MORE information
+  <Appear>
+    <span>...but LESS to process at once</span>
+  </Appear>
+</h2>
+
+<div>
+  <Circles />
+</div>
+
+<Appear>
+  <div>
+    <AnimatedCircle />
+  </div>
+</Appear>
+
+<Notes>
+
 - MORE INFORMATION (not just the snapshots of reality, but their collection)
-- …but LESS TO PROCESS AT ONE TIME (like object continuity -> We prefer continuity because our eye then only needs to follow one piece of information, not two simultaneously (remember x1 and then draw attention to x2 -> rather, we just keep our eye on xi the entire time)
-  - It hints that the takeaway is not in each single frame, but in the space between them. In their relation to one another.
+- …but LESS TO PROCESS AT ONE TIME (our eye then only needs to follow one piece of information, not two simultaneously
+- It hints that the takeaway is not in each single frame, but in the space between them. In their relation to one another.
 
 </Notes>
 
@@ -92,32 +169,147 @@ export default Split;
 
 # Animation in charts?
 
-<Notes></Notes>
-
----
-
-# Salt vs. Spices
-
 <Notes>
 
-- Salt and spices
-  - Show a picture of SALT and SPICES and talk about it
-  - When I was a bit younger, I had a sort of phase where I was absolutely intrigued by spices. This was software year in college, was learning to cook, and I frankly I think I just had a bit too much time on my hands :P
-  - I was so taken by these, and trying to understand them, that it even led to one of my first-ever data visualizations: I call it ‘Spices made simple’
-    - has the X most common spices, and you can click into it to see what it works well with; what veggies, what sources of protein, what types of sauces…
-  - BUT since then, a lot has changed. Where I live, what I do, anddd how I cook. It’s safe to say my spices are gathering dust on the shelf. Instead, I’ve found that most times, a little salt goes a long way. I don’t want to mask the flavors, I just want to bring them out a bit - to enhance them! Unify them.
-  - And while I’m happy to share the background of my cooking phases and practices with you, the real reason I’m telling this story is because salt and spices represent two different approaches to animation in data visualization. And just like a balance of salt and spices wins out in the long run in terms of my cooking habits, this balance is a winner when it comes to ‘when and how to animate charts’ as well
-  - What do I mean?
-    - Salt enhances the underlying elements, but it does not overshadow them
-    - Spices, change the flavor profile; they bring your senses to different features
-    - It’s actually a combo of salt and spices. We want to direct and disturb focus in the appropriate manner.
-  - But the trick isn’t just to add salt and add spices, but to add them where they are applicable (there is information in the way you share information)
+so then how does this apply to data visualization?
 
 </Notes>
 
 ---
 
-# _When_ to add salt and spices?
+<h2></h2>
+
+<div style={{ width: "100vw", height: "80vh", position: "relative" }}>
+  <div
+    style={{
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      backgroundSize: "cover",
+      backgroundImage: "url(./images/chefs_and_spices.jpg)"
+    }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      background: "#fffceb",
+      width: "400px",
+      height: "100vh"
+    }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      background: "#fffceb",
+      width: "450px",
+      height: "100vh",
+      left: "1000px"
+    }}
+  />
+</div>
+
+<Notes>
+
+- salt and spices represent two different approaches to animation in data visualization.
+- And just like a balance of salt and spices wins out in the long run in terms of cooking, this balance is a winner when it comes to ‘when and how to animate charts’ as well
+- What do I mean?
+  - Salt enhances the underlying elements, but it does not overshadow them
+  - Spices, change the flavor profile; they bring your senses to different features
+  - It’s actually a combo of salt and spices. We want to direct and disturb focus in the appropriate manner.
+- But the trick isn’t just to add salt and add spices, but to add them where they are applicable (there is information in the way you share information)
+
+</Notes>
+
+---
+
+## _When to add_ salt and spices?
+
+<div style={{ width: "100vw", height: "80vh", position: "relative" }}>
+  <div
+    style={{
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      backgroundSize: "cover",
+      backgroundImage: "url(./images/chefs_and_spices.jpg)"
+    }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      background: "#fffceb",
+      width: "400px",
+      height: "100vh"
+    }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      background: "#fffceb",
+      width: "450px",
+      height: "100vh",
+      left: "1000px"
+    }}
+  />
+  <Appear>
+    <div
+      style={{
+        position: "absolute",
+        width: "400px",
+        top: "100px"
+      }}
+    >
+      <ul>
+        <li>
+          <h1>A -> B </h1>
+        </li>
+      </ul>
+    </div>
+    <div
+      style={{
+        position: "absolute",
+        width: "450px",
+        left: "1000px",
+        top: "100px"
+      }}
+    >
+      <ul>
+        <li>
+          <h1>
+            a<sub>x</sub> -> a<sub>y</sub>
+          </h1>
+        </li>
+      </ul>
+    </div>
+    <div
+      style={{
+        position: "absolute",
+        width: "450px",
+        left: "1000px",
+        top: "200px"
+      }}
+    >
+      <ul>
+        <li>
+          <h1>a(t)</h1>
+        </li>
+      </ul>
+    </div>
+    <div
+      style={{
+        position: "absolute",
+        width: "400px",
+        top: "200px"
+      }}
+    >
+      <ul>
+        <li>
+          <h1>aaa look here! 👀</h1>
+        </li>
+      </ul>
+    </div>
+  </Appear>
+</div>
 
 <Notes>
 
@@ -143,17 +335,59 @@ export default Split;
 
 ## _How_ to add salt and spices?
 
+<div style={{ width: "100vw", height: "80vh", position: "relative" }}>
+  <Disappear
+    elementsToKeep={[
+      <div
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          backgroundSize: "cover",
+          backgroundImage: "url(./images/chefs_and_spices.jpg)"
+        }}
+      />
+    ]}
+    elementsToRemove={[
+      <div>
+        <div
+          style={{
+            position: "absolute",
+            background: "#fffceb",
+            width: "400px",
+            height: "100vh"
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            background: "#fffceb",
+            width: "450px",
+            height: "100vh",
+            left: "1000px"
+          }}
+        />
+      </div>
+    ]}
+  />
+</div>
+
 <Notes>
 
 - aka. how to add animation to data visualisations
 - So now we understand that animation can add a lot to a visualization, which is great, but it would probably be helpful to know how to implement this as well ;)
 - We talked about spices and salt, so let’s take a look at who would be adding those to a dish:
+- this is where our chefs come in!
 
 </Notes>
 
 ---
 
-# You can’t have two cooks in the kitchen
+# Two cooks 👨‍🍳 👨‍🍳
+
+<Appear>
+  <h1>...one kitchen.</h1>
+</Appear>
 
 <Notes>
 
@@ -167,15 +401,75 @@ export default Split;
 
 ---
 
-# Option 1: Cook1 (React) takes control
+export default Split;
+
+<img src="./images/react_with_hat.png" />
+
+<div>
+  <h2>Option 1:</h2>
+  <h1>Cook #1 takes control</h1>
+</div>
+
+<Notes></Notes>
 
 ---
 
-# Option 2: Cook2 (D3) takes control
+<CodeSurfer
+  title="Right side"
+  code={require("!raw-loader!components/App/App.js").default}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Start with this note" },
+    { lines: [6], notes: "Note for the first step" },
+    { range: [5, 9] },
+    { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
+  ]}
+/>
 
 ---
 
-# Option 3: Cook1 (React) and Cook2 (D3) share control
+export default Split;
+
+<div>
+  <h2>Option 2:</h2>
+  <h1>Cook #2 takes control</h1>
+</div>
+
+<img src="./images/d3_with_hat.png" />
+
+<Notes></Notes>
+
+---
+
+<CodeSurfer
+  title="Right side"
+  code={require("!raw-loader!components/App/App.js").default}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Start with this note" },
+    { lines: [6], notes: "Note for the first step" },
+    { range: [5, 9] },
+    { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
+  ]}
+/>
+
+---
+
+export default SplitRight;
+
+<div>
+  <img height={300} src="./images/react_with_hat.png" />
+  <img height={300} src="./images/d3_with_hat.png" />
+</div>
+
+<div>
+  <h2>Option 3:</h2>
+  <h1>Cook #1 and Cook #2 share control</h1>
+</div>
 
 <Notes>
 
@@ -185,7 +479,35 @@ export default Split;
 
 ---
 
-# Option 3 w/Hooks: Chef and Jeux Chef <3
+<CodeSurfer
+  title="Right side"
+  code={require("!raw-loader!components/App/App.js").default}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Start with this note" },
+    { lines: [6], notes: "Note for the first step" },
+    { range: [5, 9] },
+    { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
+  ]}
+/>
+
+---
+
+export default SplitRight;
+
+<div>
+  <Appear>
+    <img height={300} src="./images/react_chef.png" />
+    <img height={300} src="./images/d3_sous_chef.png" />
+  </Appear>
+</div>
+
+<div>
+  <h2>Option 3 with Hooks:</h2>
+  <h1>CHEF and SOUS CHEF</h1>
+</div>
 
 <Notes>
 
@@ -201,7 +523,27 @@ export default Split;
 
 ---
 
-# Let’s take a look at an example of the Chef and Jeux Chef at work!
+<CodeSurfer
+  title="Right side"
+  code={require("!raw-loader!components/App/App.js").default}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Start with this note" },
+    { lines: [6], notes: "Note for the first step" },
+    { range: [5, 9] },
+    { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
+  ]}
+/>
+
+---
+
+import App from "./components/App/App";
+
+<App />
+
+---
 
 <Notes>
 
@@ -255,69 +597,6 @@ export default Split;
 - Bon appetit XD
 
 </Notes>
-
----
-
-<FullScreenCode>
-
-```jsx
-import Accordian from '../components/Accordian'
-
-# Here's an Accordian
-
-It's rendered inside our MDX document.
-
-<div>test test <span style={{ color: blue}}>blue</span></div>
-```
-
-</FullScreenCode>
-
----
-
-# What is MDX-Deck?
-
----
-
-## MDX-based presentations
-
----
-
-# What can it do?
-
-<Appear>
-  <h2>📝 Write presentations in markdown</h2>
-  <h2>⚛️ Import and use React components</h2>
-  <h2>💅 Customizable themes and components</h2>
-  <h2>0️⃣ Zero-config CLI</h2>
-  <h2>💁 Presenter mode</h2>
-  <h2>📓 Speaker notes</h2>
-</Appear>
-
----
-
-export default Split;
-
-# Alternative layouts?
-
-Sweet!
-
----
-
-...but coolest of all..
-
----
-
-import App from "./components/App/App";
-
-export default Split;
-
-### React Components inside Markdown
-
-<App />
-
----
-
-Any type of components!
 
 ---
 

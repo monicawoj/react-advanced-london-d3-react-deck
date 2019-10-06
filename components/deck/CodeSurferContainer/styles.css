@@ -1,0 +1,8 @@
+.codeSurferContainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+.codeSurferContainer > div > div {
+  width: 90%;
+}

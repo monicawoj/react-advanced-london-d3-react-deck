@@ -46,7 +46,6 @@ const App = () => {
               Add some letters, see some pretty animation!
             </HelperText>
           }
-          trailingIcon={<MaterialIcon role="button" icon="delete" />}
         >
           <Input
             value={userInput}

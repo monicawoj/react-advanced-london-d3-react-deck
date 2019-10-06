@@ -19,6 +19,7 @@
   justify-content: space-around;
   flex-direction: row;
   padding: 20px;
+  font-size: 16px;
 }
 
 .button {

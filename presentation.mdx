@@ -6,11 +6,11 @@ import {
   Horizontal
 } from "mdx-deck/layouts";
 import { CodeSurfer } from "mdx-deck-code-surfer";
-import { LiveCode } from "mdx-deck-live-code";
 import { book } from "mdx-deck/themes";
 import nightOwl from "prism-react-renderer/themes/nightOwl";
 
 import Disappear from "components/deck/Disappear";
+import CodeSurferContainer from "components/deck/CodeSurferContainer";
 
 export const theme = {
   ...book,
@@ -403,36 +403,46 @@ so then how does this apply to data visualization?
 
 export default Split;
 
-<img src="./images/react_with_hat.png" />
-
-<div>
+<div
+  style={{
+    margin: "2em"
+  }}
+>
   <h2>Option 1:</h2>
   <h1>Cook #1 takes control</h1>
 </div>
+
+<img src="./images/react_with_hat.png" />
 
 <Notes></Notes>
 
 ---
 
-<CodeSurfer
-  title="Right side"
-  code={require("!raw-loader!components/App/App.js").default}
-  lang="javascript"
-  showNumbers={false}
-  dark={true}
-  steps={[
-    { notes: "Start with this note" },
-    { lines: [6], notes: "Note for the first step" },
-    { range: [5, 9] },
-    { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
-  ]}
-/>
+<CodeSurferContainer>
+  <CodeSurfer
+    title="Right side"
+    code={require("!raw-loader!components/App/App.js").default}
+    lang="javascript"
+    showNumbers={false}
+    dark={true}
+    steps={[
+      { notes: "Start with this note" },
+      { lines: [6], notes: "Note for the first step" },
+      { range: [5, 9] },
+      { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
+    ]}
+  />
+</CodeSurferContainer>
 
 ---
 
 export default Split;
 
-<div>
+<div
+  style={{
+    margin: "2em"
+  }}
+>
   <h2>Option 2:</h2>
   <h1>Cook #2 takes control</h1>
 </div>
@@ -466,7 +476,11 @@ export default SplitRight;
   <img height={300} src="./images/d3_with_hat.png" />
 </div>
 
-<div>
+<div
+  style={{
+    margin: "2em"
+  }}
+>
   <h2>Option 3:</h2>
   <h1>Cook #1 and Cook #2 share control</h1>
 </div>
@@ -504,7 +518,11 @@ export default SplitRight;
   </Appear>
 </div>
 
-<div>
+<div
+  style={{
+    margin: "2em"
+  }}
+>
   <h2>Option 3 with Hooks:</h2>
   <h1>CHEF and SOUS CHEF</h1>
 </div>
@@ -541,9 +559,7 @@ export default SplitRight;
 
 import App from "./components/App/App";
 
-<App />
-
----
+## <App />
 
 <Notes>
 

@@ -46,7 +46,11 @@ export const updateAxis = ({ ref, orientation, scale }) => {
       axisFunction = d3.axisBottom;
       break;
     case "Left":
-      axisFunction = d3.axisLeft;
+      axisFunction = scale =>
+        d3
+          .axisLeft(scale)
+          .ticks(5)
+          .tickFormat(d3.format(".0f"));
       break;
     case "Top":
       axisFunction = d3.axisTop;

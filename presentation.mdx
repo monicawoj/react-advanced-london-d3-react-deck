@@ -11,6 +11,7 @@ import nightOwl from "prism-react-renderer/themes/nightOwl";
 
 import Disappear from "components/deck/Disappear";
 import CodeSurferContainer from "components/deck/CodeSurferContainer";
+import ChartContainer from "components/BarChart/ChartContainer";
 
 export const theme = {
   ...book,
@@ -30,25 +31,40 @@ export const theme = {
 
 ---
 
-# Hi, I'm Monica
+export default Split;
+
+<div
+  style={{
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+  }}
+>
+  <h1 style={{ fontSize: "3em" }}>Hi, I'm Monica!</h1>
+</div>
 
 <Appear>
-  <div>
-    <img src="./images/netguru.png" />
+  <div style={{ width: "50%" }}>
+    <img src="./images/netguru.svg" />
   </div>
-  <h2>Polish 🇵🇱 /American 🇺🇸</h2>
-  <h2>Outdoors</h2>
-  <h2>some other emoji about me</h2>
+  <h1>Polish 🇵🇱 / American 🇺🇸</h1>
+  <h1>Outdoors enthusiast 🌲 🏔️ </h1>
+  <h1>Lifelong learner 🏄‍♀️ 🥊 🧗‍♀️ ... 📊 </h1>
 </Appear>
 
 ---
 
-<div>
-  <img src="./images/boring_chart.gif" />
-  <Appear>
-    <h2>There has to be a better way</h2>
+<div style={{ backgroundImage: `url(./images/boring_chart.gif)`,
+    backgroundSize: 'contain',
+    width: '40vw',
+    height: '40vh',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'}} />
+  
+<Appear>
+    <h1 style={{ textAlign: 'center'}}>There has to be a better way</h1>
   </Appear>
-</div>
 
 <Notes>
 
@@ -59,9 +75,16 @@ export const theme = {
 
 ---
 
-<div>
-  <img src="./images/d3_gallery.png" width={900} />
-</div>
+<div
+  style={{
+    backgroundImage: `url(./images/d3_gallery.png)`,
+    backgroundSize: "cover",
+    width: "100vw",
+    height: "100vh",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  }}
+/>
 
 <Notes>
 
@@ -73,14 +96,32 @@ export const theme = {
 
 ---
 
-<Appear>
-  <h1>⚛️</h1>
-  <div>
-    <img src="./images/d3-icon.png" height={90} />
-  </div>
-  <h1>👨‍🍳 🍳 👩‍🍳</h1>
-  <h1>?</h1>
-</Appear>
+<div style={{ fontSize: "2em", width: "100vw", height: "100vh" }}>
+  <Appear>
+    <div
+      style={{
+        backgroundImage: `url(./images/React-icon.png)`,
+        backgroundSize: "contain",
+        width: "auto",
+        height: "200px",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    />
+    <div
+      style={{
+        backgroundImage: `url(./images/d3-icon.png)`,
+        backgroundSize: "contain",
+        width: "auto",
+        height: "200px",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    />
+    <h1 style={{ textAlign: "center" }}>👨‍🍳 🍳 👩‍🍳</h1>
+    <h1 style={{ textAlign: "center" }}>?</h1>
+  </Appear>
+</div>
 
 <Notes>
 
@@ -193,7 +234,7 @@ so then how does this apply to data visualization?
     style={{
       position: "absolute",
       background: "#fffceb",
-      width: "400px",
+      width: "30%",
       height: "100vh"
     }}
   />
@@ -201,9 +242,9 @@ so then how does this apply to data visualization?
     style={{
       position: "absolute",
       background: "#fffceb",
-      width: "450px",
+      width: "30%",
       height: "100vh",
-      left: "1000px"
+      left: "70%"
     }}
   />
 </div>
@@ -238,7 +279,7 @@ so then how does this apply to data visualization?
     style={{
       position: "absolute",
       background: "#fffceb",
-      width: "400px",
+      width: "30%",
       height: "100vh"
     }}
   />
@@ -246,17 +287,17 @@ so then how does this apply to data visualization?
     style={{
       position: "absolute",
       background: "#fffceb",
-      width: "450px",
+      width: "30%",
       height: "100vh",
-      left: "1000px"
+      left: "70%"
     }}
   />
   <Appear>
     <div
       style={{
         position: "absolute",
-        width: "400px",
-        top: "100px"
+        width: "30%",
+        top: "10%"
       }}
     >
       <ul>
@@ -268,9 +309,9 @@ so then how does this apply to data visualization?
     <div
       style={{
         position: "absolute",
-        width: "450px",
-        left: "1000px",
-        top: "100px"
+        width: "30%",
+        left: "70%",
+        top: "10%"
       }}
     >
       <ul>
@@ -284,9 +325,9 @@ so then how does this apply to data visualization?
     <div
       style={{
         position: "absolute",
-        width: "450px",
-        left: "1000px",
-        top: "200px"
+        width: "30%",
+        left: "70%",
+        top: "30%"
       }}
     >
       <ul>
@@ -298,8 +339,8 @@ so then how does this apply to data visualization?
     <div
       style={{
         position: "absolute",
-        width: "400px",
-        top: "200px"
+        width: "30%",
+        top: "30%"
       }}
     >
       <ul>
@@ -354,7 +395,7 @@ so then how does this apply to data visualization?
           style={{
             position: "absolute",
             background: "#fffceb",
-            width: "400px",
+            width: "30%",
             height: "100vh"
           }}
         />
@@ -362,9 +403,9 @@ so then how does this apply to data visualization?
           style={{
             position: "absolute",
             background: "#fffceb",
-            width: "450px",
+            width: "30%",
             height: "100vh",
-            left: "1000px"
+            left: "70%"
           }}
         />
       </div>
@@ -418,21 +459,37 @@ export default Split;
 
 ---
 
-<CodeSurferContainer>
-  <CodeSurfer
-    title="Right side"
-    code={require("!raw-loader!components/App/App.js").default}
-    lang="javascript"
-    showNumbers={false}
-    dark={true}
-    steps={[
-      { notes: "Start with this note" },
-      { lines: [6], notes: "Note for the first step" },
-      { range: [5, 9] },
-      { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
-    ]}
-  />
-</CodeSurferContainer>
+import BarChartReactControl from "components/BarChart/BarChartReactControl";
+
+export default Split;
+
+<div style={{ width: "50vw" }}>
+  <CodeSurferContainer percent>
+    <CodeSurfer
+      title="Bar Chart ala Cook #1 (React)"
+      code={
+        require("!raw-loader!components/BarChart/BarChartReactControl.js")
+          .default
+      }
+      lang="javascript"
+      showNumbers={false}
+      dark={true}
+      steps={[
+        { notes: "" },
+        { lines: [6, 10], notes: "Start with this note" },
+        { lines: [11, 20], notes: "setup using D3 as utility lib" },
+        { range: [22, 32] },
+        { range: [34, 44] }
+      ]}
+    />
+  </CodeSurferContainer>
+</div>
+
+<ChartContainer
+  renderChart={data => (
+    <BarChartReactControl data={data} width={400} height={400} />
+  )}
+/>
 
 ---
 
@@ -453,18 +510,35 @@ export default Split;
 
 ---
 
-<CodeSurfer
-  title="Right side"
-  code={require("!raw-loader!components/App/App.js").default}
-  lang="javascript"
-  showNumbers={false}
-  dark={true}
-  steps={[
-    { notes: "Start with this note" },
-    { lines: [6], notes: "Note for the first step" },
-    { range: [5, 9] },
-    { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
-  ]}
+import BarChartD3Control from "components/BarChart/BarChartD3Control";
+
+export default Split;
+
+<div style={{ width: "50vw" }}>
+  <CodeSurferContainer percent>
+    <CodeSurfer
+      title="Bar Chart ala Cook #2 (D3)"
+      code={
+        require("!raw-loader!components/BarChart/BarChartD3Control.js").default
+      }
+      lang="javascript"
+      showNumbers={false}
+      dark={true}
+      steps={[
+        { notes: "" },
+        { lines: [6, 10], notes: "Start with this note" },
+        { lines: [11, 20], notes: "setup using D3 as utility lib" },
+        { range: [22, 32] },
+        { range: [34, 44] }
+      ]}
+    />
+  </CodeSurferContainer>
+</div>
+
+<ChartContainer
+  renderChart={data => (
+    <BarChartD3Control data={data} width={400} height={400} />
+  )}
 />
 
 ---
@@ -493,18 +567,36 @@ export default SplitRight;
 
 ---
 
-<CodeSurfer
-  title="Right side"
-  code={require("!raw-loader!components/App/App.js").default}
-  lang="javascript"
-  showNumbers={false}
-  dark={true}
-  steps={[
-    { notes: "Start with this note" },
-    { lines: [6], notes: "Note for the first step" },
-    { range: [5, 9] },
-    { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
-  ]}
+import BarChartShareControl from "components/BarChart/BarChartShareControl";
+
+export default Split;
+
+<div style={{ width: "50vw" }}>
+  <CodeSurferContainer percent>
+    <CodeSurfer
+      title="Bar Chart ala Cook #1 and Cook #2 (React + D3)"
+      code={
+        require("!raw-loader!components/BarChart/BarChartShareControl.js")
+          .default
+      }
+      lang="javascript"
+      showNumbers={false}
+      dark={true}
+      steps={[
+        { notes: "" },
+        { lines: [6, 10], notes: "Start with this note" },
+        { lines: [11, 20], notes: "setup using D3 as utility lib" },
+        { range: [22, 32] },
+        { range: [34, 44] }
+      ]}
+    />
+  </CodeSurferContainer>
+</div>
+
+<ChartContainer
+  renderChart={data => (
+    <BarChartShareControl data={data} width={400} height={400} />
+  )}
 />
 
 ---
@@ -524,36 +616,20 @@ export default SplitRight;
   }}
 >
   <h2>Option 3 with Hooks:</h2>
-  <h1>CHEF and SOUS CHEF</h1>
+  <h1>Chef and Sous Chef</h1>
 </div>
 
 <Notes>
 
 - But there’s a difference between working together, and working together in an straightforward, predictable, organised manner:
-- not Cook1 and Cook2 but chef and jeux chef!
+- not Cook1 and Cook2 but chef and sous chef!
 - They need clear communication in order to make their collaboration work. This is where React Hooks come in!
-- The chef (React) tells the jeux chef (D3) when it needs his/her help, and then gives it free reign to work it’s magic
+- The chef (React) tells the sous chef (D3) when it needs his/her help, and then gives it free reign to work it’s magic
 - React prepares the dish and D3 adds the embellishments, the animations
-  - Everything the jeux chef does is a side effect, he is making changes to the dish that the chef didn’t make himself
+  - Everything the sous chef does is a side effect, he is making changes to the dish that the chef didn’t make himself
   - But just like in the kitchen, it’s best if one cook adds the spices, so too is true in data viz. react gives the cue, the recipe, and d3 adds the salt and spices.
 
 </Notes>
-
----
-
-<CodeSurfer
-  title="Right side"
-  code={require("!raw-loader!components/App/App.js").default}
-  lang="javascript"
-  showNumbers={false}
-  dark={true}
-  steps={[
-    { notes: "Start with this note" },
-    { lines: [6], notes: "Note for the first step" },
-    { range: [5, 9] },
-    { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
-  ]}
-/>
 
 ---
 
@@ -579,25 +655,196 @@ import App from "./components/App/App";
     - Create SVG container
   - Maps the recipe elements to ingredients
     - Create elements based on that data
-- Now the chef needs to tell the jeux chef where and when he can take control
+- Now the chef needs to tell the sous chef where and when he can take control
   - useRef (where)
   - useEffect (when)
-- And when it’s his time, the jeux chef works his magic
+- And when it’s his time, the sous chef works his magic
   - updateFunction
 
 </Notes>
 
 ---
 
-<Appear>
-  - Animation (salt and spices) - No two cooks in the kitchen - Chef and jeux
-  chef need to have proper communication / delegation of responsibilities for a
-  dish to taste good :) - Bon appetit XD
-</Appear>
+<CodeSurferContainer>
+  <CodeSurfer
+    title="Bar Chart ala Cook #1 and #2 (React + D3)"
+    code={
+      require("!raw-loader!components/BarChart/BarChartShareControl.js").default
+    }
+    lang="javascript"
+    showNumbers={false}
+    dark={true}
+    steps={[
+      { notes: "Start with this note" },
+      { lines: [6], notes: "Note for the first step" },
+      { range: [5, 9] },
+      { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
+    ]}
+  />
+</CodeSurferContainer>
+
+---
+
+## Recap
+
+<div style={{ width: "100vw", height: "80vh", position: "relative" }}>
+  <Disappear
+    elementsToKeep={[
+      <div
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          backgroundSize: "cover",
+          backgroundImage: "url(./images/chefs_and_spices.jpg)"
+        }}
+      />
+    ]}
+    elementsToRemove={[
+      <div
+        style={{
+          width: "15%",
+          height: "100%",
+          background: "#fffceb",
+          opacity: "0.5",
+          position: "absolute",
+          left: "55%"
+        }}
+      />,
+      <div
+        style={{
+          width: "25%",
+          height: "100%",
+          background: "#fffceb",
+          opacity: "0.5",
+          position: "absolute",
+          left: "30%"
+        }}
+      />,
+      <div
+        style={{
+          width: "30%",
+          height: "100%",
+          background: "#fffceb",
+          opacity: "0.5",
+          position: "absolute",
+          left: "70%"
+        }}
+      />,
+      <div
+        style={{
+          width: "30%",
+          height: "100%",
+          opacity: "0.5",
+          background: "#fffceb",
+          position: "absolute",
+          left: "0"
+        }}
+      />
+    ]}
+    elementsToAppear={[
+      <div
+        style={{
+          width: "15%",
+          height: "100%",
+          position: "absolute",
+          left: "55%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "flex-start",
+          top: "-9%"
+        }}
+      >
+        <p style={{ margin: 0 }}>
+          a<sub>i</sub> ➡️ a<sub>j</sub>
+        </p>
+      </div>,
+      <div
+        style={{
+          width: "25%",
+          height: "100%",
+          position: "absolute",
+          left: "30%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "flex-start",
+          top: "-9%"
+        }}
+      >
+        {`A ➡️ B`}
+      </div>,
+      <div>
+        <img
+          src="./images/d3-icon.png"
+          width={"5%"}
+          style={{
+            position: "absolute",
+            left: "78%",
+            top: "18%",
+            background: "white",
+            borderRadius: "10px"
+          }}
+        />
+        <div
+          style={{
+            width: "30%",
+            height: "100%",
+            position: "absolute",
+            left: "70%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            top: "-7%"
+          }}
+        >
+          <p style={{ margin: 0 }}>
+            <i>function</i> update()
+          </p>
+        </div>
+      </div>,
+      <div>
+        <img
+          src="./images/React-icon.svg"
+          width={"5%"}
+          height={"10%"}
+          style={{
+            position: "absolute",
+            left: "14%",
+            top: "20%",
+            background: "white",
+            borderRadius: "10px",
+            backgroundSize: "cover"
+          }}
+        />
+        <div
+          style={{
+            width: "30%",
+            height: "100%",
+            position: "absolute",
+            left: "0",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            top: "-7%"
+          }}
+        >
+          useState, useRef, useEffect
+        </div>
+      </div>
+    ]}
+  />
+</div>
 
 <Notes>
 
--To Summarize:
+- Animation: add salt and spices when the dish calls for each
+  - 'Salt' animation 🧂: for changes within _piece of data_ (e.g, same 'key', different value)
+  - 'Spices' animation 🌶️: for changes within _dataset_ / redirecting focus, (e.g, something added or removed from dataset)
+- Creating Animated Charts
+- Chef + sous chef for proper communication / delegation of responsibilities 🤝
+
+  - Chef (React): `useState`, `useRef`, `useEffect`
+  - Sous chef (D3): `function update()`
 
 - Animation (salt and spices)
   - When it comes to charts, with animation we’re really talking about animated transitions (make visual changes natural/seamless to keep us immersed, a unified whole, a ‘continuation’ of the story). Spices and salt, (animations) should serve to unify the whole. No longer separate ingredients, but a unified flavour profile.
@@ -605,36 +852,52 @@ import App from "./components/App/App";
   - If you’re using D3 with React, put it in its place! It’s a side effect because it affects the DOM in ways outside of directly React. So place it in useEffect
     - “Anything that results in changes that can be observed when the calculation is completed, beside the return value of the calculation itself, is a side effect.”
     - “Calculation should return just result of the calculation. Anything else is side-effect.”
-- Chef and jeux chef need to have proper communication / delegation of responsibilities for a dish to taste good :)
+- Chef and sous chef need to have proper communication / delegation of responsibilities for a dish to taste good :)
   - Chef:
     - useState, useRef, useEffect
-  - Jeux Chef:
+  - Sous Chef:
     - Update function
-- Bon appetit XD
 
 </Notes>
 
 ---
 
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+## Take-out Box
 
-### <a href="https://github.com/formidablelabs/react-live" target="_blank">react-live</a>
+<ul>
+  <Appear>
+    <li>🙊 Let the ingredients speak, don't speak for them </li>
+    <li>👩‍🍳 Don't have too many cooks in the kitchen </li>
+    <li>🍳 Cooking isn't baking</li>
+  </Appear>
+</ul>
 
-<br />
+<Notes>
 
-<LiveProvider code="<strong>Hello World!</strong>">
-  <LiveEditor />
-  <LiveError />
-  <br />
-  <LivePreview />
-</LiveProvider>
+- When it comes to animation, we talked about animation, what it is, why it adds value, when to add it, and how to add it to a visualization using D3 and React Hooks...
+- but to close, I wanted to leave you with a few takeaways that apply to code and cooking alike:
+
+1. The wrong approach / the right approach to animation:
+
+- Wrong: 'what (animation/seasoning) do we want to add?'
+  - In danger of adding too much salt or spices, which can overpower the underlying ingredients they were meant to enhance
+- Right: 'what (animations/seasoning) is this (data/dish) calling for?'
+
+2. Don't have two cooks in the kitchen..
+
+- a chef and sous chef, with clear delineation of responsibilities work much better :)
+
+3. Cooking isn't baking
+
+- use patterns, not exact proportions... you can be a little more creative in what exactly you do for each, but you do need to know the foundations
+- know how to use a spoon, a spatula, a pot / useState, useEffect, useRef hooks to make creating more pleasant
+
+</Notes>
 
 ---
 
-## In fact...
+# Bon appetit! 🍽️
 
-This is an mdx-deck presentation.
+---
 
-```
-
-```
+# Resources

@@ -1,13 +1,7 @@
 import React from "react";
 import * as d3 from "d3";
 
-import { getData } from "../../utils";
-
 class BarChartD3Control extends React.Component {
-  state = {
-    data: getData(5)
-  };
-
   componentDidMount() {
     this.updateChart();
   }
@@ -17,8 +11,7 @@ class BarChartD3Control extends React.Component {
   }
 
   updateChart = () => {
-    const { data } = this.state;
-    const { width, height } = this.props;
+    const { width, height, data } = this.props;
     let colors = ["#2176ae", "#57b8ff", "#b66d0d", "#fbb13c", "#fe6847"];
 
     //scales
@@ -35,7 +28,7 @@ class BarChartD3Control extends React.Component {
     let bars = d3
       .select(this.svgEl)
       .selectAll("rect")
-      .data(this.state.data);
+      .data(data);
 
     //populate those selected spaces with svg elements (rect in this case)
     bars
@@ -55,18 +48,8 @@ class BarChartD3Control extends React.Component {
   };
 
   render() {
-    return (
-      <div>
-        <svg
-          width={this.props.width}
-          height={this.props.height}
-          ref={el => (this.svgEl = el)}
-        />
-        <button onClick={() => this.setState({ data: getData(5) })}>
-          get new data
-        </button>
-      </div>
-    );
+    const { width, height } = this.props;
+    return <svg width={width} height={height} ref={el => (this.svgEl = el)} />;
   }
 }
 

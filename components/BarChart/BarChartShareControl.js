@@ -1,13 +1,9 @@
 import React from "react";
 import * as d3 from "d3";
 
-import { getData } from "../../utils";
+import { getRandomData } from "./utils";
 
 class BarChartShareControl extends React.Component {
-  state = {
-    data: getData(5)
-  };
-
   componentDidMount() {
     this.updateChart();
   }
@@ -17,8 +13,7 @@ class BarChartShareControl extends React.Component {
   }
 
   updateChart = () => {
-    const { data } = this.state;
-    const { width, height } = this.props;
+    const { width, height, data } = this.props;
     let colors = ["#2176ae", "#57b8ff", "#b66d0d", "#fbb13c", "#fe6847"];
 
     //scales
@@ -45,21 +40,14 @@ class BarChartShareControl extends React.Component {
   };
 
   render() {
+    const { width, height, data } = this.props;
+
     //create elements (but without anything special)
-    const bars = this.state.data.map(d => <rect key={d.name} />);
+    const bars = data.map(d => <rect key={d.x} />);
     return (
-      <div>
-        <svg
-          width={this.props.width}
-          height={this.props.height}
-          ref={el => (this.svgRef = el)}
-        >
-          {bars}
-        </svg>
-        <button onClick={() => this.setState({ data: getData(5) })}>
-          get new data
-        </button>
-      </div>
+      <svg width={width} height={height} ref={el => (this.svgRef = el)}>
+        {bars}
+      </svg>
     );
   }
 }

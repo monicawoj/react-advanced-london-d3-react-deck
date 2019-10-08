@@ -3,6 +3,16 @@
   height: 100vh;
 }
 
-.codeSurferContainer > div > div {
+.codeSurferContainerPercent {
+  width: 50vw;
+  height: 100vh;
+}
+
+.codeSurferContainer > div > div,
+.codeSurferContainerPercent > div > div {
   width: 90%;
+}
+
+.codeSurferContainerPercent > div {
+  width: 50vw !important;
 }

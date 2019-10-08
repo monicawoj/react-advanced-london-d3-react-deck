@@ -1,6 +1,12 @@
 import React from "react";
 import "./styles.css";
 
-export default ({ children }) => {
-  return <div className="codeSurferContainer">{children}</div>;
+export default ({ children, percent = false }) => {
+  return (
+    <div
+      className={percent ? "codeSurferContainerPercent" : "codeSurferContainer"}
+    >
+      {children}
+    </div>
+  );
 };

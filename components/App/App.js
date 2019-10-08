@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Button from "@material/react-button";
 import TextField, { HelperText, Input } from "@material/react-text-field";
 import { Overline, Headline2 } from "@material/react-typography";
-import MaterialIcon from "@material/react-material-icon";
 
 import NotBoringKeyboard from "../NotBoringKeyboard";
 
@@ -12,14 +11,7 @@ import "@material/react-material-icon/dist/material-icon.css";
 import "@material/react-typography/dist/typography.css";
 import "./App.css";
 
-// import BarChartD3Control from "../BarChart/BarChartD3Control";
-// import BarChartReactControl from "../BarChart/BarChartReactControl";
-// import BarChartShareControl from "../BarChart/BarChartShareControl";
-
-//TODO: reset should animate transition out
-//TODO: yaxis starts with ugly 0
-//TODO: refactor code, can i move any of it to a seperate file?
-//TODO: test responsiveness when i want to add one to the side (to see how languages compare)
+// TODO: reset should animate transition out
 
 const App = () => {
   const [xAxisType, setXAxisType] = useState("QWERTY");

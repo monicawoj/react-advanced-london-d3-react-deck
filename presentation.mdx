@@ -16,32 +16,35 @@ import ColorLoopingText from "components/deck/ColorLoopingText";
 import RotateLoopingText from "components/deck/RotateLoopingText";
 import Footer from "components/deck/Footer";
 
-import "./style.css";
+import { colors } from "components/deck/theme";
+
 export const theme = {
   ...book,
   codeSurfer: { ...nightOwl, showNumbers: false }
 };
 
 <div style={{ fontSize: "1.5em", position: "relative", bottom: "-20%" }}>
-  <RotateLoopingText><h1 className="title">Hooked on D3</h1></RotateLoopingText>
+  <RotateLoopingText>
+    <h1 className="title">Hooked on D3</h1>
+  </RotateLoopingText>
   <h2>
-    Creating <ColorLoopingText>Animated</ColorLoopingText> Ch(art)s with D3 and
-    React Hooks
+    Creating <ColorLoopingText>Animated</ColorLoopingText> Ch(art)s with D3
+    and React Hooks
   </h2>
 </div>
 <div
-    style={{
-      backgroundImage: `url(./images/fishing-hook.svg)`,
-      backgroundSize: "contain",
-      position: "absolute",
-      width: "40vw",
-      height: "50vh",
-      top: "90px",
-      left: "355px",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat"
-    }}
-  />
+  style={{
+    backgroundImage: `url(./images/fishing-hook.svg)`,
+    backgroundSize: "contain",
+    position: "absolute",
+    width: "40vw",
+    height: "50vh",
+    top: "90px",
+    left: "355px",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  }}
+/>
 
 <Footer />
 
@@ -86,8 +89,8 @@ export default Split;
     backgroundRepeat: 'no-repeat'}} />
   
 <Appear>
-    <h1 style={{ textAlign: 'center'}}>There has to be a better way</h1>
-  </Appear>
+  <h1 style={{ textAlign: 'center'}}>There has to be a better way</h1>
+</Appear>
 
 <Notes>
 
@@ -1004,7 +1007,64 @@ import App from "./components/App/App";
 
 ---
 
-# Bon appetit! 🍽️
+<div
+  style={{
+    width: "100vw",
+    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between"
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexGrow: 1
+    }}
+  >
+    <h1 style={{ textAlign: "center", fontSize: "3em" }}>
+      {" "}
+      Bon appetit! 🍽️{" "}
+    </h1>
+  </div>
+
+  <div
+    style={{
+      width: "100vw",
+      height: "120px",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      textAlign: "right",
+      borderTop: `1px solid ${colors.secondary}`,
+      padding: "1em",
+      color: colors.grey
+    }}
+  >
+    <div>NordicJS 2019</div>
+    <a
+      href="https://www.reflectingreason.com/"
+      target="\_blank"
+      className="aboutMeLink"
+    >
+      <div style={{ height: "100%", display: "flex", alignItems: "center" }}>
+        <div>Monica Wojciechowska</div>
+        <div
+          style={{
+            width: "60px",
+            height: "60px",
+            backgroundSize: "contain",
+            backgroundImage: "url(./images/reflecting-reason-logo.svg)",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat"
+          }}
+        />
+      </div>
+    </a>
+  </div>
+</div>
 
 ---
 

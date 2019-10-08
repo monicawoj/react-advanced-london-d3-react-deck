@@ -12,15 +12,38 @@ import nightOwl from "prism-react-renderer/themes/nightOwl";
 import Disappear from "components/deck/Disappear";
 import CodeSurferContainer from "components/deck/CodeSurferContainer";
 import ChartContainer from "components/BarChart/ChartContainer";
+import ColorLoopingText from "components/deck/ColorLoopingText";
+import RotateLoopingText from "components/deck/RotateLoopingText";
+import Footer from "components/deck/Footer";
 
+import "./style.css";
 export const theme = {
   ...book,
   codeSurfer: { ...nightOwl, showNumbers: false }
 };
 
-# Hooked on D3
+<div style={{ fontSize: "1.5em", position: "relative", bottom: "-20%" }}>
+  <RotateLoopingText><h1 className="title">Hooked on D3</h1></RotateLoopingText>
+  <h2>
+    Creating <ColorLoopingText>Animated</ColorLoopingText> Ch(art)s with D3 and
+    React Hooks
+  </h2>
+</div>
+<div
+    style={{
+      backgroundImage: `url(./images/fishing-hook.svg)`,
+      backgroundSize: "contain",
+      position: "absolute",
+      width: "40vw",
+      height: "50vh",
+      top: "90px",
+      left: "355px",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat"
+    }}
+  />
 
-## Creating Animated Ch(art)s with D3 and React Hooks
+<Footer />
 
 <Notes>
 
@@ -97,17 +120,18 @@ export default Split;
 ---
 
 <div style={{ fontSize: "2em", width: "100vw", height: "100vh" }}>
+  <div
+    style={{
+      backgroundImage: `url(./images/React-icon.png)`,
+      backgroundSize: "contain",
+      width: "auto",
+      height: "200px",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      margin: "0.67em"
+    }}
+  />
   <Appear>
-    <div
-      style={{
-        backgroundImage: `url(./images/React-icon.png)`,
-        backgroundSize: "contain",
-        width: "auto",
-        height: "200px",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
-      }}
-    />
     <div
       style={{
         backgroundImage: `url(./images/d3-icon.png)`,
@@ -115,7 +139,8 @@ export default Split;
         width: "auto",
         height: "200px",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
+        backgroundRepeat: "no-repeat",
+        margin: "0.67em"
       }}
     />
     <h1 style={{ textAlign: "center" }}>👨‍🍳 🍳 👩‍🍳</h1>
@@ -146,9 +171,16 @@ import BoldingText from "components/deck/BoldingText";
 
 ---
 
-<h2>
-  <strike>Time and Change</strike> Change / Time
-</h2>
+<h1>
+  <Disappear
+    elementsToAppear={[
+      <span>
+        <strike>Time and Change</strike> Change / Time
+      </span>
+    ]}
+    elementsToRemove={[<span>Time and Change</span>]}
+  />
+</h1>
 
 <Notes>
 
@@ -159,9 +191,9 @@ import BoldingText from "components/deck/BoldingText";
 
 ---
 
-## Why animate?
+# Why animate?
 
-<ul>
+<ul style={{ fontSize: "2em" }}>
   <Appear>
     <li>🔅 🔆 continuity</li>
     <li>🔄 action / reaction</li>
@@ -181,14 +213,14 @@ import BoldingText from "components/deck/BoldingText";
 
 import { Circles, AnimatedCircle } from "components/Circle";
 
-<h2>
+<h1>
   MORE information
   <Appear>
     <span>...but LESS to process at once</span>
   </Appear>
-</h2>
+</h1>
 
-<div>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
   <Circles />
 </div>
 
@@ -446,14 +478,26 @@ export default Split;
 
 <div
   style={{
-    margin: "2em"
+    marginLeft: "2em",
+    fontSize: "1.5em"
   }}
 >
   <h2>Option 1:</h2>
   <h1>Cook #1 takes control</h1>
 </div>
 
-<img src="./images/react_with_hat.png" />
+<div
+  style={{
+    position: "absolute",
+    width: "40%",
+    height: "50%",
+    top: "25%",
+    backgroundSize: "contain",
+    backgroundImage: "url(./images/react_with_hat.png)",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  }}
+/>
 
 <Notes></Notes>
 
@@ -497,14 +541,26 @@ export default Split;
 
 <div
   style={{
-    margin: "2em"
+    marginLeft: "2em",
+    fontSize: "1.5em"
   }}
 >
   <h2>Option 2:</h2>
   <h1>Cook #2 takes control</h1>
 </div>
 
-<img src="./images/d3_with_hat.png" />
+<div
+  style={{
+    position: "absolute",
+    width: "40%",
+    height: "50%",
+    top: "25%",
+    backgroundSize: "contain",
+    backgroundImage: "url(./images/d3_with_hat.png)",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  }}
+/>
 
 <Notes></Notes>
 
@@ -543,20 +599,46 @@ export default Split;
 
 ---
 
-export default SplitRight;
-
-<div>
-  <img height={300} src="./images/react_with_hat.png" />
-  <img height={300} src="./images/d3_with_hat.png" />
-</div>
+export default Split;
 
 <div
   style={{
-    margin: "2em"
+    marginLeft: "2em",
+    fontSize: "1.5em"
   }}
 >
   <h2>Option 3:</h2>
   <h1>Cook #1 and Cook #2 share control</h1>
+</div>
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh"
+  }}
+>
+  <div
+    style={{
+      width: "40%",
+      height: "50%",
+      backgroundSize: "contain",
+      backgroundImage: "url(./images/react_with_hat.png)",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat"
+    }}
+  />
+  <div
+    style={{
+      width: "40%",
+      height: "50%",
+      backgroundSize: "contain",
+      backgroundImage: "url(./images/d3_with_hat.png)",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat"
+    }}
+  />
 </div>
 
 <Notes>
@@ -601,22 +683,48 @@ export default Split;
 
 ---
 
-export default SplitRight;
-
-<div>
-  <Appear>
-    <img height={300} src="./images/react_chef.png" />
-    <img height={300} src="./images/d3_sous_chef.png" />
-  </Appear>
-</div>
+export default Split;
 
 <div
   style={{
-    margin: "2em"
+    marginLeft: "2em",
+    fontSize: "1.5em"
   }}
 >
   <h2>Option 3 with Hooks:</h2>
   <h1>Chef and Sous Chef</h1>
+</div>
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh"
+  }}
+>
+  <Appear>
+    <div
+      style={{
+        width: "40%",
+        height: "50%",
+        backgroundSize: "contain",
+        backgroundImage: "url(./images/react_chef.png)",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    />
+    <div
+      style={{
+        width: "40%",
+        height: "50%",
+        backgroundSize: "contain",
+        backgroundImage: "url(./images/d3_sous_chef.png)",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    />
+  </Appear>
 </div>
 
 <Notes>

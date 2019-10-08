@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
+import Button from "@material/react-button";
+import "@material/react-button/dist/button.min.css";
+
 export const AnimatedCircle = () => {
   const containerRef = useRef(null);
   const [animating, setAnimating] = useState("idle");
@@ -16,9 +19,9 @@ export const AnimatedCircle = () => {
           .select("circle")
           .transition()
           .duration(2000)
-          .attr("cx", 450)
+          .attr("cx", 750)
           .style("fill", "orange")
-          .attr("r", 30);
+          .attr("r", 50);
         break;
       }
       case "backward": {
@@ -26,17 +29,17 @@ export const AnimatedCircle = () => {
           .select("circle")
           .transition()
           .duration(2000)
-          .attr("cx", 10)
+          .attr("cx", 30)
           .style("fill", "blue")
-          .attr("r", 10);
+          .attr("r", 30);
         break;
       }
       default: {
         d3.select(containerRef.current)
           .select("circle")
-          .attr("r", 10)
-          .attr("cx", 10)
-          .attr("cy", 40)
+          .attr("r", 30)
+          .attr("cx", 30)
+          .attr("cy", 60)
           .style("fill", "blue");
         break;
       }
@@ -44,12 +47,14 @@ export const AnimatedCircle = () => {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <svg ref={containerRef} width={500} height={100}>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
+      <svg ref={containerRef} width={800} height={130}>
         <circle />
       </svg>
-      <button
-        style={{ height: "50px" }}
+      <Button
+        style={{ height: "50px", fontSize: "32px" }}
         onClick={() => {
           if (animating === "forward") {
             return setAnimating("backward");
@@ -58,14 +63,14 @@ export const AnimatedCircle = () => {
         }}
       >
         Run animation
-      </button>
+      </Button>
     </div>
   );
 };
 
 export const Circles = () => (
-  <svg width={500} height={100}>
-    <circle r={10} cx={10} cy={40} fill={"blue"} />
-    <circle r={30} cx={450} cy={40} fill={"orange"} />
+  <svg width={800} height={130}>
+    <circle r={30} cx={30} cy={60} fill={"blue"} />
+    <circle r={50} cx={750} cy={60} fill={"orange"} />
   </svg>
 );

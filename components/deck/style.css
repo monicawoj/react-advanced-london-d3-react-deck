@@ -1,0 +1,164 @@
+.aboutMeLink {
+  text-decoration: none;
+  color: #707070;
+}
+
+.aboutMeLink:hover {
+  background: white;
+  box-shadow: 5px 10px #888888;
+}
+
+.colorLoopingText {
+  -webkit-animation: color-change 5s infinite;
+  -moz-animation: color-change 5s infinite;
+  -o-animation: color-change 5s infinite;
+  -ms-animation: color-change 5s infinite;
+  animation: color-change 5s infinite;
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    color: #ff598f;
+  }
+  25% {
+    color: #fd8a5e;
+  }
+  50% {
+    color: #01dddd;
+  }
+  75% {
+    color: #00bfaf;
+  }
+  100% {
+    color: #ff598f;
+  }
+}
+@-moz-keyframes color-change {
+  0% {
+    color: #ff598f;
+  }
+  25% {
+    color: #fd8a5e;
+  }
+  50% {
+    color: #01dddd;
+  }
+  75% {
+    color: #00bfaf;
+  }
+  100% {
+    color: #ff598f;
+  }
+}
+@-ms-keyframes color-change {
+  0% {
+    color: #ff598f;
+  }
+  25% {
+    color: #fd8a5e;
+  }
+  50% {
+    color: #01dddd;
+  }
+  75% {
+    color: #00bfaf;
+  }
+  100% {
+    color: #ff598f;
+  }
+}
+@-o-keyframes color-change {
+  0% {
+    color: #ff598f;
+  }
+  25% {
+    color: #fd8a5e;
+  }
+  50% {
+    color: #01dddd;
+  }
+  75% {
+    color: #00bfaf;
+  }
+  100% {
+    color: #ff598f;
+  }
+}
+@keyframes color-change {
+  0% {
+    color: #ff598f;
+  }
+  25% {
+    color: #fd8a5e;
+  }
+  50% {
+    color: #01dddd;
+  }
+  75% {
+    color: #00bfaf;
+  }
+  100% {
+    color: #ff598f;
+  }
+}
+
+.rotateLoopingText {
+  text-align: center;
+  animation: rotate-change 5s linear infinite;
+}
+
+@-webkit-keyframes rotate-change {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@-moz-keyframes rotate-change {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@-ms-keyframes rotate-change {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@-o-keyframes rotate-change {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes rotate-change {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}

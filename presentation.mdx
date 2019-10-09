@@ -875,6 +875,58 @@ export default Split;
 
 ---
 
+import BarChartShareControlHooks from "components/BarChart/BarChartShareControlHooks";
+
+export default Split;
+
+<div style={{ width: "50vw" }}>
+  <CodeSurferContainer percent>
+    <CodeSurfer
+      title="Bar Chart ala Chef (React) and Sous Chef (D3)"
+      code={
+        require("!raw-loader!components/BarChart/BarChartShareControlHooks.js")
+          .default
+      }
+      lang="javascript"
+      showNumbers={false}
+      dark={true}
+      steps={[
+        { notes: "" },
+        { lines: [1] },
+        { range: [4, 49] },
+        {
+          lines: [9, 44],
+          notes:
+            "useRef to reference our svg container"
+        },
+        { range: [13, 35] },
+        {
+          lines: [25],
+          notes:
+            "select our referenced svg container"
+        },
+        {
+          lines: [11],
+          notes:
+            "run draw() on mount and data update"
+        }
+      ]}
+    />
+  </CodeSurferContainer>
+</div>
+
+<ChartContainer
+  renderChart={data => (
+    <BarChartShareControlHooks
+      data={data}
+      width={400}
+      height={400}
+    />
+  )}
+/>
+
+---
+
 import App from "./components/App/App";
 
 <App />

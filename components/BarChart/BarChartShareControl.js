@@ -3,18 +3,16 @@ import * as d3 from "d3";
 
 class BarChartShareControl extends React.Component {
   componentDidMount() {
-    this.updateChart();
+    this.draw();
   }
 
   componentDidUpdate() {
-    this.updateChart();
+    this.draw();
   }
 
-  updateChart = () => {
+  draw = () => {
+    //define scales
     const { width, height, data } = this.props;
-    let colors = ["#2176ae", "#57b8ff", "#b66d0d", "#fbb13c", "#fe6847"];
-
-    //scales
     const xScale = d3
       .scaleBand()
       .domain(d3.range(0, data.length))
@@ -24,7 +22,7 @@ class BarChartShareControl extends React.Component {
       .domain([-3, 3])
       .range([0, height]);
 
-    //grab all elements and add styles / position
+    //grab elements and style/position
     d3.select(this.svgRef)
       .selectAll("rect")
       .data(data)
@@ -41,9 +39,16 @@ class BarChartShareControl extends React.Component {
     const { width, height, data } = this.props;
 
     //create elements (but without anything special)
-    const bars = data.map(d => <rect key={d.x} />);
+    const bars = data.map(d => (
+      <rect key={d.x} />
+    ));
+
     return (
-      <svg width={width} height={height} ref={el => (this.svgRef = el)}>
+      <svg
+        width={width}
+        height={height}
+        ref={el => (this.svgRef = el)}
+      >
         {bars}
       </svg>
     );

@@ -754,7 +754,9 @@ export default Split;
 
 <Notes>
 
-- React (cook1) preps the ingredients and the pot, D3 (cook2) puts everything in its place
+- React (cook1) preps the ingredients and the pot, D3 (cook2) puts everything in its place and flavors it (styles)
+- this is rather similar to the option before, but here we're creating elements with React, not D3
+- React creates elements, D3 styles
 
 </Notes>
 
@@ -777,16 +779,25 @@ export default Split;
       dark={true}
       steps={[
         { notes: "" },
+        { range: [5, 40] },
+        { range: [38, 55] },
+        { lines: [47, 48, 49, 50, 51, 53] },
+        { lines: [42, 43, 44, 52] },
+        { range: [13, 36] },
         {
-          lines: [6, 10],
-          notes: "Start with this note"
+          range: [14, 23],
+          notes: "define scales"
         },
         {
-          lines: [11, 20],
-          notes: "setup using D3 as utility lib"
+          range: [25, 36],
+          notes:
+            "select elements and style/position"
         },
-        { range: [22, 32] },
-        { range: [34, 44] }
+        {
+          range: [5, 11],
+          notes:
+            "call draw() on mount and props update"
+        }
       ]}
     />
   </CodeSurferContainer>

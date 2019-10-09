@@ -67,7 +67,9 @@ export default Split;
     justifyContent: "center"
   }}
 >
-  <h1 style={{ fontSize: "3em" }}>Hi, I'm Monica!</h1>
+  <h1 style={{ fontSize: "3em" }}>
+    Hi, I'm Monica!
+  </h1>
 </div>
 
 <Appear>
@@ -122,7 +124,13 @@ export default Split;
 
 ---
 
-<div style={{ fontSize: "2em", width: "100vw", height: "100vh" }}>
+<div
+  style={{
+    fontSize: "2em",
+    width: "100vw",
+    height: "100vh"
+  }}
+>
   <div
     style={{
       backgroundImage: `url(./images/React-icon.png)`,
@@ -146,7 +154,9 @@ export default Split;
         margin: "0.67em"
       }}
     />
-    <h1 style={{ textAlign: "center" }}>👨‍🍳 🍳 👩‍🍳</h1>
+    <h1 style={{ textAlign: "center" }}>
+      👨‍🍳 🍳 👩‍🍳
+    </h1>
     <h1 style={{ textAlign: "center" }}>?</h1>
   </Appear>
 </div>
@@ -178,10 +188,13 @@ import BoldingText from "components/deck/BoldingText";
   <Disappear
     elementsToAppear={[
       <span>
-        <strike>Time and Change</strike> Change / Time
+        <strike>Time and Change</strike> Change /
+        Time
       </span>
     ]}
-    elementsToRemove={[<span>Time and Change</span>]}
+    elementsToRemove={[
+      <span>Time and Change</span>
+    ]}
   />
 </h1>
 
@@ -214,7 +227,10 @@ import BoldingText from "components/deck/BoldingText";
 
 ---
 
-import { Circles, AnimatedCircle } from "components/Circle";
+import {
+  Circles,
+  AnimatedCircle
+} from "components/Circle";
 
 <h1>
   MORE information
@@ -223,7 +239,13 @@ import { Circles, AnimatedCircle } from "components/Circle";
   </Appear>
 </h1>
 
-<div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+<div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  }}
+>
   <Circles />
 </div>
 
@@ -255,14 +277,21 @@ so then how does this apply to data visualization?
 
 <h2></h2>
 
-<div style={{ width: "100vw", height: "80vh", position: "relative" }}>
+<div
+  style={{
+    width: "100vw",
+    height: "80vh",
+    position: "relative"
+  }}
+>
   <div
     style={{
       position: "absolute",
       width: "100%",
       height: "100%",
       backgroundSize: "cover",
-      backgroundImage: "url(./images/chefs_and_spices.jpg)"
+      backgroundImage:
+        "url(./images/chefs_and_spices.jpg)"
     }}
   />
   <div
@@ -300,14 +329,21 @@ so then how does this apply to data visualization?
 
 ## _When to add_ salt and spices?
 
-<div style={{ width: "100vw", height: "80vh", position: "relative" }}>
+<div
+  style={{
+    width: "100vw",
+    height: "80vh",
+    position: "relative"
+  }}
+>
   <div
     style={{
       position: "absolute",
       width: "100%",
       height: "100%",
       backgroundSize: "cover",
-      backgroundImage: "url(./images/chefs_and_spices.jpg)"
+      backgroundImage:
+        "url(./images/chefs_and_spices.jpg)"
     }}
   />
   <div
@@ -411,7 +447,13 @@ so then how does this apply to data visualization?
 
 ## _How_ to add salt and spices?
 
-<div style={{ width: "100vw", height: "80vh", position: "relative" }}>
+<div
+  style={{
+    width: "100vw",
+    height: "80vh",
+    position: "relative"
+  }}
+>
   <Disappear
     elementsToKeep={[
       <div
@@ -420,7 +462,8 @@ so then how does this apply to data visualization?
           width: "100%",
           height: "100%",
           backgroundSize: "cover",
-          backgroundImage: "url(./images/chefs_and_spices.jpg)"
+          backgroundImage:
+            "url(./images/chefs_and_spices.jpg)"
         }}
       />
     ]}
@@ -496,7 +539,8 @@ export default Split;
     height: "50%",
     top: "25%",
     backgroundSize: "contain",
-    backgroundImage: "url(./images/react_with_hat.png)",
+    backgroundImage:
+      "url(./images/react_with_hat.png)",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat"
   }}
@@ -523,10 +567,20 @@ export default Split;
       dark={true}
       steps={[
         { notes: "" },
-        { lines: [6, 10], notes: "Start with this note" },
-        { lines: [11, 20], notes: "setup using D3 as utility lib" },
-        { range: [22, 32] },
-        { range: [34, 44] }
+        {
+          range: [4, 13],
+          notes:
+            "start with setup (dimensions, data, scales)"
+        },
+        {
+          range: [15, 25],
+          notes: "map data to elements with attrs"
+        },
+        {
+          range: [27, 32],
+          notes:
+            "render elements in SVG container"
+        }
       ]}
     />
   </CodeSurferContainer>
@@ -534,9 +588,19 @@ export default Split;
 
 <ChartContainer
   renderChart={data => (
-    <BarChartReactControl data={data} width={400} height={400} />
+    <BarChartReactControl
+      data={data}
+      width={400}
+      height={400}
+    />
   )}
 />
+
+<Notes>
+
+- this is the classic React that we know and love, but by just using D3 as a utility library we miss out on the animation magic
+
+</Notes>
 
 ---
 
@@ -559,13 +623,22 @@ export default Split;
     height: "50%",
     top: "25%",
     backgroundSize: "contain",
-    backgroundImage: "url(./images/d3_with_hat.png)",
+    backgroundImage:
+      "url(./images/d3_with_hat.png)",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat"
   }}
 />
 
-<Notes></Notes>
+<Notes>
+
+- so we want the transition power of D3..
+- the next option is for D3 to take control of the DOM
+- here D3 creates, appends, and edits elements
+- it does the entering, updating, and exiting
+- this method is a bit more involved
+
+</Notes>
 
 ---
 
@@ -578,17 +651,46 @@ export default Split;
     <CodeSurfer
       title="Bar Chart ala Cook #2 (D3)"
       code={
-        require("!raw-loader!components/BarChart/BarChartD3Control.js").default
+        require("!raw-loader!components/BarChart/BarChartD3Control.js")
+          .default
       }
       lang="javascript"
       showNumbers={false}
       dark={true}
+      fontSize={"19px"}
       steps={[
         { notes: "" },
-        { lines: [6, 10], notes: "Start with this note" },
-        { lines: [11, 20], notes: "setup using D3 as utility lib" },
-        { range: [22, 32] },
-        { range: [34, 44] }
+        { lines: [6, 10, 14, 49] },
+        {
+          range: [49, 58],
+          notes:
+            "just render svg container with ref"
+        },
+        { range: [14, 47] },
+        {
+          range: [16, 25],
+          notes: "define scales based on data"
+        },
+        {
+          range: [27, 31],
+          notes:
+            "create selector and attach data to it"
+        },
+        {
+          range: [33, 44],
+          notes:
+            "populate selected spaces with svg elements"
+        },
+        {
+          range: [46, 47],
+          notes:
+            "remove bars that are no longer needed"
+        },
+        {
+          range: [5, 12],
+          notes:
+            "run draw() on mount and props update"
+        }
       ]}
     />
   </CodeSurferContainer>
@@ -596,7 +698,11 @@ export default Split;
 
 <ChartContainer
   renderChart={data => (
-    <BarChartD3Control data={data} width={400} height={400} />
+    <BarChartD3Control
+      data={data}
+      width={400}
+      height={400}
+    />
   )}
 />
 
@@ -627,7 +733,8 @@ export default Split;
       width: "40%",
       height: "50%",
       backgroundSize: "contain",
-      backgroundImage: "url(./images/react_with_hat.png)",
+      backgroundImage:
+        "url(./images/react_with_hat.png)",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat"
     }}
@@ -637,7 +744,8 @@ export default Split;
       width: "40%",
       height: "50%",
       backgroundSize: "contain",
-      backgroundImage: "url(./images/d3_with_hat.png)",
+      backgroundImage:
+        "url(./images/d3_with_hat.png)",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat"
     }}
@@ -669,8 +777,14 @@ export default Split;
       dark={true}
       steps={[
         { notes: "" },
-        { lines: [6, 10], notes: "Start with this note" },
-        { lines: [11, 20], notes: "setup using D3 as utility lib" },
+        {
+          lines: [6, 10],
+          notes: "Start with this note"
+        },
+        {
+          lines: [11, 20],
+          notes: "setup using D3 as utility lib"
+        },
         { range: [22, 32] },
         { range: [34, 44] }
       ]}
@@ -680,7 +794,11 @@ export default Split;
 
 <ChartContainer
   renderChart={data => (
-    <BarChartShareControl data={data} width={400} height={400} />
+    <BarChartShareControl
+      data={data}
+      width={400}
+      height={400}
+    />
   )}
 />
 
@@ -712,7 +830,8 @@ export default Split;
         width: "40%",
         height: "50%",
         backgroundSize: "contain",
-        backgroundImage: "url(./images/react_chef.png)",
+        backgroundImage:
+          "url(./images/react_chef.png)",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
       }}
@@ -722,7 +841,8 @@ export default Split;
         width: "40%",
         height: "50%",
         backgroundSize: "contain",
-        backgroundImage: "url(./images/d3_sous_chef.png)",
+        backgroundImage:
+          "url(./images/d3_sous_chef.png)",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
       }}
@@ -780,16 +900,23 @@ import App from "./components/App/App";
   <CodeSurfer
     title="Bar Chart ala Cook #1 and #2 (React + D3)"
     code={
-      require("!raw-loader!components/BarChart/BarChartShareControl.js").default
+      require("!raw-loader!components/BarChart/BarChartShareControl.js")
+        .default
     }
     lang="javascript"
     showNumbers={false}
     dark={true}
     steps={[
       { notes: "Start with this note" },
-      { lines: [6], notes: "Note for the first step" },
+      {
+        lines: [6],
+        notes: "Note for the first step"
+      },
       { range: [5, 9] },
-      { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
+      {
+        tokens: { 9: [3, 4, 5] },
+        notes: "Note for the third step"
+      }
     ]}
   />
 </CodeSurferContainer>
@@ -798,7 +925,13 @@ import App from "./components/App/App";
 
 ## Recap
 
-<div style={{ width: "100vw", height: "80vh", position: "relative" }}>
+<div
+  style={{
+    width: "100vw",
+    height: "80vh",
+    position: "relative"
+  }}
+>
   <Disappear
     elementsToKeep={[
       <div
@@ -807,7 +940,8 @@ import App from "./components/App/App";
           width: "100%",
           height: "80%",
           backgroundSize: "cover",
-          backgroundImage: "url(./images/chefs_and_spices.jpg)"
+          backgroundImage:
+            "url(./images/chefs_and_spices.jpg)"
         }}
       />
     ]}
@@ -939,7 +1073,12 @@ import App from "./components/App/App";
             bottom: "9%"
           }}
         >
-          <p style={{ margin: 0, fontSize: "1.7em" }}>
+          <p
+            style={{
+              margin: 0,
+              fontSize: "1.7em"
+            }}
+          >
             <i>function</i> update()
           </p>
         </div>
@@ -979,8 +1118,13 @@ import App from "./components/App/App";
 
 <ul style={{ fontSize: "2em" }}>
   <Appear>
-    <li>🙊 Let the ingredients speak, don't speak for them </li>
-    <li>👩‍🍳 Don't have too many cooks in the kitchen </li>
+    <li>
+      🙊 Let the ingredients speak, don't speak
+      for them{" "}
+    </li>
+    <li>
+      👩‍🍳 Don't have too many cooks in the kitchen{" "}
+    </li>
     <li>🍳 Cooking isn't baking</li>
   </Appear>
 </ul>

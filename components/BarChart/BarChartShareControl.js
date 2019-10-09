@@ -1,8 +1,6 @@
 import React from "react";
 import * as d3 from "d3";
 
-import { getRandomData } from "./utils";
-
 class BarChartShareControl extends React.Component {
   componentDidMount() {
     this.updateChart();
@@ -36,7 +34,7 @@ class BarChartShareControl extends React.Component {
       .attr("y", d => yScale(d.y))
       .attr("width", xScale.bandwidth())
       .attr("height", d => height - yScale(d.y))
-      .style("fill", (d, i) => colors[i]);
+      .style("fill", d => d.color);
   };
 
   render() {

@@ -35,5 +35,18 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 100vw;
-  max-width: 800px;
+  max-width: 1200px;
+}
+
+.buttonContainer {
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75vw;
+}
+
+.button {
+  font-size: 2em;
+  height: 100%;
 }

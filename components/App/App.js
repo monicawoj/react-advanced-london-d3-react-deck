@@ -30,8 +30,10 @@ const App = () => {
       <Headline2>The Not-Boring KeyBoard</Headline2>
       <div className="container">
         <TextField
+          style={{ background: "white" }}
           textarea
           fullWidth
+          className="textArea"
           onTrailingIconSelect={resetData}
           helperText={
             <HelperText>
@@ -40,6 +42,7 @@ const App = () => {
           }
         >
           <Input
+            style={{ fontSize: "40px", lineHeight: "50px" }}
             value={userInput}
             onChange={e => setUserInput(e.target.value)}
           />

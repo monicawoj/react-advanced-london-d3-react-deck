@@ -933,6 +933,9 @@ import App from "./components/App/App";
 
 <Notes>
 
+- and this pattern works for simple and complex alike
+- this is a bit more involved, but the same pattern holds
+
 - This is what we will be preparing today: The Non-boring Keyboard ala Monica :)
   - the inspiration for this dish is the question ‘how come the keyboard is laid out the way it is?’
   - Description:
@@ -961,25 +964,48 @@ import App from "./components/App/App";
 
 <CodeSurferContainer>
   <CodeSurfer
-    title="Bar Chart ala Cook #1 and #2 (React + D3)"
+    title="Not-boring KeyBoard ala Chef and Sous Chef"
     code={
-      require("!raw-loader!components/BarChart/BarChartShareControl.js")
+      require("!raw-loader!components/NotBoringKeyboard/index.js")
         .default
     }
     lang="javascript"
     showNumbers={false}
     dark={true}
     steps={[
-      { notes: "Start with this note" },
+      { notes: "" },
+      { range: [15, 19], notes: "create refs" },
       {
-        lines: [6],
-        notes: "Note for the first step"
+        range: [21, 23],
+        notes: "set initial state from raw data"
       },
-      { range: [5, 9] },
+      { range: [30, 62], notes: "define scales" },
       {
-        tokens: { 9: [3, 4, 5] },
-        notes: "Note for the third step"
-      }
+        range: [72, 125],
+        notes:
+          "define when to run our draw functions"
+      },
+      {
+        range: [122, 125],
+        notes: "such as upon axis change"
+      },
+      {
+        range: [170, 249],
+        notes: "our update function"
+      },
+      {
+        range: [218, 244],
+        notes: "animation upon keypress"
+      },
+      {
+        range: [252, 255],
+        notes: "our points and bars"
+      },
+      {
+        range: [257, 266],
+        notes: "svg container and elements"
+      },
+      { range: [267, 271], notes: "our axes" }
     ]}
   />
 </CodeSurferContainer>

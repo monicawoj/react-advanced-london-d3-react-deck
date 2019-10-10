@@ -132,16 +132,6 @@ const NotBoringKeyboard = ({ xAxisType, yAxisType, userInput }) => {
     transition: { type: transitionType, value: transitionValue }
   }) => {
     switch (transitionType) {
-      case "xaxis": {
-        return d3
-          .select(chartRef.current)
-          .selectAll("rect")
-          .data(barData)
-          .transition()
-          .duration(1000)
-          .attr("x", d => xScale(d.value));
-      }
-
       case "keypress": {
         return d3
           .select(chartRef.current)
@@ -161,6 +151,16 @@ const NotBoringKeyboard = ({ xAxisType, yAxisType, userInput }) => {
           .attr("y", yScale(1))
           .attr("height", yScale(0))
           .style("fill", "white");
+      }
+        
+      case "xaxis": {
+        return d3
+          .select(chartRef.current)
+          .selectAll("rect")
+          .data(barData)
+          .transition()
+          .duration(1000)
+          .attr("x", d => xScale(d.value));
       }
       default:
         break;

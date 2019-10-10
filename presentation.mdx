@@ -56,6 +56,7 @@ export default Split;
   style={{
     height: "100vh",
     display: "flex",
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center"
   }}
@@ -63,15 +64,25 @@ export default Split;
   <h1 style={{ fontSize: "3em" }}>
     Hi, I'm Monica!
   </h1>
+  <div
+    style={{
+      backgroundImage: `url(./images/monica_snow.jpg)`,
+      backgroundSize: "contain",
+      width: "50vw",
+      height: "70vh",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat"
+    }}
+  />
 </div>
 
 <Appear>
-  <div style={{ width: "50%" }}>
+  <h1>American 🇺🇸 / Polish 🇵🇱</h1>
+  <div style={{ width: "40%" }}>
     <img src="./images/netguru.svg" />
   </div>
-  <h1>American 🇺🇸 / Polish 🇵🇱</h1>
   <h1>Outdoors enthusiast 🌲 🏔️ </h1>
-  <h1>Lifelong learner 🏄‍♀️ 🥊 🧗‍♀️ ... 📊 </h1>
+  <h1>Lifelong learner 🏄‍♀️ 🧗‍♀️ 🥊 ... 🖥️ </h1>
 </Appear>
 
 ---
@@ -1226,12 +1237,15 @@ import App from "./components/App/App";
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      flexGrow: 1
+      flexDirection: 'column',
+      height: '80vh',
     }}
-  >
+>
     <h1 style={{ textAlign: "center", fontSize: "4em" }}>
       Bon appetit! 🍽️{" "}
     </h1>
+    <h2>Deck / Examples: <a href={'https://www.reflectingreason.com/'} target="_blank">https://www.reflectingreason.com/</a></h2>
+
   </div>
 
   <div
@@ -1273,3 +1287,18 @@ import App from "./components/App/App";
 ---
 
 # Resources
+
+D3:
+
+- https://github.com/d3/
+- https://observablehq.com/@d3/d3-scalepoint
+
+Additional takes on integrating D3 and React:
+
+- https://medium.com/@stopyransky/react-hooks-and-d3-39be1d900fb
+- https://engineering.billymob.com/integrating-d3-with-react-memo-20e5999e2053
+- https://swizec.com/blog/easy-d3-blackbox-components-react-hooks/swizec/8689
+
+Presentation deck:
+
+- https://github.com/jxnblk/mdx-deck

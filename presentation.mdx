@@ -73,7 +73,7 @@ export default Split;
   </h1>
   <div
     style={{
-      backgroundImage: `url(./images/monica_snow.jpg)`,
+      backgroundImage: `url(${require("file-loader!./images/monica_snow.jpg")})`,
       backgroundSize: "contain",
       width: "50vw",
       height: "70vh",
@@ -94,7 +94,7 @@ export default Split;
   <h1>Lifelong learner 🥊 🧗‍♀️ 🏄‍♀️ ... 🖥️ </h1>
   <div
     style={{
-      backgroundImage: `url(./images/monica_canyoning.jpg)`,
+      backgroundImage: `url(${require("file-loader!./images/monica_canyoning.jpg")})`,
       backgroundSize: "contain",
       width: "50vw",
       height: "70vh",
@@ -107,7 +107,7 @@ export default Split;
   />
   <div
     style={{
-      backgroundImage: `url(./images/monica_surfing.jpg)`,
+      backgroundImage: `url(${require("file-loader!./images/monica_surfing.jpg")})`,
       backgroundSize: "contain",
       width: "50vw",
       height: "70vh",
@@ -210,7 +210,7 @@ export default Split;
   <Appear>
     <div
       style={{
-        backgroundImage: `url(./images/d3-icon.png)`,
+        backgroundImage: `url(${require("file-loader!./images/d3-icon.png")})`,
         backgroundSize: "contain",
         width: "auto",
         height: "200px",
@@ -357,8 +357,7 @@ import {
       width: "100%",
       height: "100%",
       backgroundSize: "cover",
-      backgroundImage:
-        "url(./images/chefs_and_spices.jpg)"
+      backgroundImage: `url(${require("file-loader!./images/chefs_and_spices.jpg")})`
     }}
   />
   <div
@@ -409,8 +408,7 @@ import {
       width: "100%",
       height: "100%",
       backgroundSize: "cover",
-      backgroundImage:
-        "url(./images/chefs_and_spices.jpg)"
+      backgroundImage: `url(${require("file-loader!./images/chefs_and_spices.jpg")})`
     }}
   />
   <div
@@ -519,8 +517,7 @@ import {
           width: "100%",
           height: "100%",
           backgroundSize: "cover",
-          backgroundImage:
-            "url(./images/chefs_and_spices.jpg)"
+          backgroundImage: `url(${require("file-loader!./images/chefs_and_spices.jpg")})`
         }}
       />
     ]}
@@ -597,8 +594,7 @@ export default Split;
     height: "50%",
     top: "25%",
     backgroundSize: "contain",
-    backgroundImage:
-      "url(./images/react_with_hat.png)",
+    backgroundImage: `url(${require("file-loader!./images/react_with_hat.png")})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat"
   }}
@@ -681,8 +677,7 @@ export default Split;
     height: "50%",
     top: "25%",
     backgroundSize: "contain",
-    backgroundImage:
-      "url(./images/d3_with_hat.png)",
+    backgroundImage: `url(${require("file-loader!./images/d3_with_hat.png")})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat"
   }}
@@ -791,8 +786,7 @@ export default Split;
       width: "40%",
       height: "50%",
       backgroundSize: "contain",
-      backgroundImage:
-        "url(./images/react_with_hat.png)",
+      backgroundImage: `url(${require("file-loader!./images/react_with_hat.png")})`,
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat"
     }}
@@ -802,8 +796,7 @@ export default Split;
       width: "40%",
       height: "50%",
       backgroundSize: "contain",
-      backgroundImage:
-        "url(./images/d3_with_hat.png)",
+      backgroundImage: `url(${require("file-loader!./images/d3_with_hat.png")})`,
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat"
     }}
@@ -899,8 +892,7 @@ export default Split;
         width: "40%",
         height: "50%",
         backgroundSize: "contain",
-        backgroundImage:
-          "url(./images/react_chef.png)",
+        backgroundImage: `url(${require("file-loader!./images/react_chef.png")})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
       }}
@@ -910,8 +902,7 @@ export default Split;
         width: "40%",
         height: "50%",
         backgroundSize: "contain",
-        backgroundImage:
-          "url(./images/d3_sous_chef.png)",
+        backgroundImage: `url(${require("file-loader!./images/d3_sous_chef.png")})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
       }}
@@ -1094,8 +1085,7 @@ import App from "./components/App/App";
           width: "100%",
           height: "80%",
           backgroundSize: "cover",
-          backgroundImage:
-            "url(./images/chefs_and_spices.jpg)"
+          backgroundImage: `url(${require("file-loader!./images/chefs_and_spices.jpg")})`
         }}
       />
     ]}
@@ -1205,7 +1195,7 @@ import App from "./components/App/App";
       </div>,
       <div>
         <img
-          src="./images/d3-icon.png"
+          src={require("file-loader!./images/d3-icon.png")}
           width={"5%"}
           style={{
             position: "absolute",

@@ -88,7 +88,9 @@ export default Split;
 <Appear>
   <h1>American 🇺🇸 / Polish 🇵🇱</h1>
   <div style={{ width: "40%" }}>
-    <img src="./images/netguru.svg" />
+    <img
+      src={require("file-loader!./images/netguru.svg")}
+    />
   </div>
   <h1>Outdoors enthusiast 🌲 🏔️ </h1>
   <h1>Lifelong learner 🥊 🧗‍♀️ 🏄‍♀️ ... 🖥️ </h1>
@@ -1165,7 +1167,7 @@ import App from "./components/App/App";
       </div>,
       <div>
         <img
-          src="./images/React-icon.svg"
+          src={require("file-loader!./images/React-icon.png")}
           width={"5%"}
           height={"10%"}
           style={{
@@ -1324,7 +1326,7 @@ import App from "./components/App/App";
             width: "60px",
             height: "60px",
             backgroundSize: "contain",
-            backgroundImage: "url(./images/reflecting-reason-logo.svg)",
+            backgroundImage: `url(${require("file-loader!./images/reflecting-reason-logo.svg")})`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat"
           }}

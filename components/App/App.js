@@ -25,7 +25,7 @@ const App = () => {
   return (
     <div className="App-body">
       <Overline>
-        Nordic.JS 2019 - Monica Wojciechowska - "Hooked on D3"
+        React Advanced London 2019 - Monica Wojciechowska - "Hooked on D3"
       </Overline>
       <Headline2>The Not-Boring KeyBoard</Headline2>
       <div className="container">

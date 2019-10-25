@@ -34,7 +34,7 @@ export const theme = {
 </div>
 <div
   style={{
-    backgroundImage: `url(./images/fishing-hook.svg)`,
+    backgroundImage: `url(${require("file-loader!./images/fishing-hook.svg")})`,
     backgroundSize: "contain",
     position: "absolute",
     width: "40vw",
@@ -48,6 +48,13 @@ export const theme = {
 
 <Footer />
 
+<Notes>
+
+- today I'm excited to be talking to you about ()
+- but first a little bit about myself
+
+</Notes>
+
 ---
 
 export default Split;
@@ -58,7 +65,7 @@ export default Split;
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "flex-start"
   }}
 >
   <h1 style={{ fontSize: "3em" }}>
@@ -70,6 +77,8 @@ export default Split;
       backgroundSize: "contain",
       width: "50vw",
       height: "70vh",
+      position: "fixed",
+      top: "25%",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat"
     }}
@@ -82,8 +91,60 @@ export default Split;
     <img src="./images/netguru.svg" />
   </div>
   <h1>Outdoors enthusiast 🌲 🏔️ </h1>
-  <h1>Lifelong learner 🏄‍♀️ 🧗‍♀️ 🥊 ... 🖥️ </h1>
+  <h1>Lifelong learner 🥊 🧗‍♀️ 🏄‍♀️ ... 🖥️ </h1>
+  <div
+    style={{
+      backgroundImage: `url(./images/monica_canyoning.jpg)`,
+      backgroundSize: "contain",
+      width: "50vw",
+      height: "70vh",
+      position: "fixed",
+      top: "25%",
+      transform: "translateX(-50vw)",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat"
+    }}
+  />
+  <div
+    style={{
+      backgroundImage: `url(./images/monica_surfing.jpg)`,
+      backgroundSize: "contain",
+      width: "50vw",
+      height: "70vh",
+      position: "absolute",
+      top: "25%",
+      transform: "translateX(-50vw)",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat"
+    }}
+  />
+  <div
+    style={{
+      background: "#fffceb",
+      backgroundSize: "contain",
+      width: "50vw",
+      height: "75vh",
+      position: "absolute",
+      top: "24%",
+      transform: "translateX(-50vw)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontSize: "300px"
+    }}
+  >
+    👩‍💻
+  </div>
 </Appear>
+
+<Notes>
+
+- dual-US and Polish citizen
+- born and raised in NJ, but living in Poland for the past year and a half
+- frontend dev at netguru
+- ...sorry no cool pictures of me sitting in front of a computer coding
+
+</Notes>
 
 ---
 
@@ -227,7 +288,6 @@ import BoldingText from "components/deck/BoldingText";
 - A reaction to our action (communication of cause-and-effect)
 - Motion: A clue that ‘something is happening’ (e.g. Loading component); relationship with time
 - hopefully not just an empty loading component that would be bad
-
 - should be at 5 min
 
 </Notes>
@@ -276,7 +336,7 @@ import {
 
 <Notes>
 
-so then how does this apply to data visualization?
+- so then how does this apply to data visualization?
 
 </Notes>
 
@@ -328,7 +388,7 @@ so then how does this apply to data visualization?
 - Salt enhances the underlying elements, but it does not overshadow them
 - Spices, change the flavor profile; they bring your senses to different features
 - It’s actually a combo of salt and spices. We want to maintain focus (salt) and redirect focus (spices) in the appropriate manner.
-- But the trick isn’t just to add salt and add spices, but to add them where they are applicable (there is information in the way you share information)
+- But the trick isn’t just to add salt and add spices, but to add them where they are applicable
 
 </Notes>
 
@@ -436,7 +496,6 @@ so then how does this apply to data visualization?
 - ai -> aj: but we an attribute of an element in dataset A changes, that is salt
 - a(t): same thing goes for when a is a function of time; time series data
 - aaa look here: direct redirection - animation as narration / storytelling / explanation
-
 - should be at 9 min
 
 </Notes>
@@ -514,8 +573,6 @@ so then how does this apply to data visualization?
 - that both want to be in control of one kitchen (DOM - React Virtual Dom)
 - ...so the issue here is about DOM management
 - There are three ways this situation could play out:
-
-- should be at 10.5min
 
 </Notes>
 
@@ -1187,8 +1244,8 @@ import App from "./components/App/App";
 <Notes>
 
 - add salt and spices (animation) when the dish calls for each
-  - 'Salt' animation 🧂: for changes within _piece of data_ (e.g, same 'key', different value)
-  - 'Spices' animation 🌶️: for changes within _dataset_ / redirecting focus, (e.g, something added or removed from dataset)
+- 'Salt' animation 🧂: for changes within _piece of data_ (e.g, same 'key', different value)
+- 'Spices' animation 🌶️: for changes within _dataset_ / redirecting focus, (e.g, something added or removed from dataset)
 - Chef (React): `useState`, `useRef`, `useEffect`
 - Sous chef (D3): `function draw()`
 
@@ -1244,7 +1301,10 @@ import App from "./components/App/App";
     <h1 style={{ textAlign: "center", fontSize: "4em" }}>
       Bon appetit! 🍽️{" "}
     </h1>
-    <h2>Deck / Examples: <a href={'https://www.reflectingreason.com/'} target="_blank">https://www.reflectingreason.com/</a></h2>
+    <h2>
+      @monica_woj
+    </h2>
+    <h2><a href={'https://www.reflectingreason.com/'} target="_blank">https://www.reflectingreason.com/</a></h2>
 
   </div>
 
@@ -1261,14 +1321,14 @@ import App from "./components/App/App";
       color: colors.grey
     }}
   >
-    <div>NordicJS 2019</div>
+    <div>React Advanced London 2019</div>
     <a
       href="https://www.reflectingreason.com/"
       target="\_blank"
       className="aboutMeLink"
     >
       <div style={{ height: "100%", display: "flex", alignItems: "center" }}>
-        <div>Monica Wojciechowska</div>
+        <div>@monica_woj</div>
         <div
           style={{
             width: "60px",

@@ -21,21 +21,28 @@ const Footer = () => {
         color: colors.grey
       }}
     >
-      <div>NordicJS 2019</div>
+      <div>React Advanced London 2019</div>
 
       <a
         href="https://www.reflectingreason.com/"
         target="_blank"
         className="aboutMeLink"
       >
-        <div style={{ height: "100%", display: "flex", alignItems: "center" }}>
-          <div>Monica Wojciechowska</div>
+        <div
+          style={{
+            height: "100%",
+            display: "flex",
+            alignItems: "center"
+          }}
+        >
+          <div>@monica_woj</div>
           <div
             style={{
               width: "60px",
               height: "60px",
               backgroundSize: "contain",
-              backgroundImage: "url(./images/reflecting-reason-logo.svg)",
+              backgroundImage:
+                "url(./images/reflecting-reason-logo.svg)",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat"
             }}

@@ -1,5 +1,5 @@
 {
-  "name": "hooked-on-d3-nordicjs",
+  "name": "hooked-on-d3-react-advanced-london",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -25,6 +25,7 @@
     "@rooks/use-boundingclientrect": "^3.3.0",
     "d3": "^5.9.2",
     "d3-selection-multi": "^1.0.1",
+    "file-loader": "^4.2.0",
     "node-sass": "^4.12.0",
     "react-live": "^1.11.0"
   }

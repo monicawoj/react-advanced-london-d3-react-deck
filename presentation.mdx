@@ -344,41 +344,32 @@ import {
 
 ---
 
-<h2></h2>
-
 <div
   style={{
-    width: "100vw",
-    height: "80vh",
-    position: "relative"
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
   }}
 >
   <div
     style={{
-      position: "absolute",
-      width: "100%",
-      height: "100%",
-      backgroundSize: "cover",
-      backgroundImage: `url(${require("file-loader!./images/chefs_and_spices.jpg")})`
+      backgroundImage: `url(${require("file-loader!./images/salt-shaker.png")})`,
+      backgroundSize: "contain",
+      width: "350px",
+      height: "350px",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      margin: "0.67em"
     }}
   />
   <div
     style={{
-      position: "absolute",
-      background: "#fffceb",
-      width: "30%",
-      height: "100vh"
+      minWidth: "500px",
+      fontSize: "350px"
     }}
-  />
-  <div
-    style={{
-      position: "absolute",
-      background: "#fffceb",
-      width: "30%",
-      height: "100vh",
-      left: "70%"
-    }}
-  />
+  >
+    & 🌶️
+  </div>
 </div>
 
 <Notes>
@@ -401,102 +392,161 @@ import {
   style={{
     width: "100vw",
     height: "80vh",
-    position: "relative"
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
   }}
 >
   <div
     style={{
-      position: "absolute",
-      width: "100%",
-      height: "100%",
-      backgroundSize: "cover",
-      backgroundImage: `url(${require("file-loader!./images/chefs_and_spices.jpg")})`
+      minWidth: "300px",
+      fontSize: "150px"
     }}
-  />
+  >
+    🌶️
+  </div>
   <div
     style={{
-      position: "absolute",
-      background: "#fffceb",
-      width: "30%",
-      height: "100vh"
+      backgroundImage: `url(${require("file-loader!./images/A_to_B.gif")})`,
+      backgroundSize: "contain",
+      width: "60vw",
+      height: "60vw",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      margin: "0.67em"
     }}
   />
-  <div
-    style={{
-      position: "absolute",
-      background: "#fffceb",
-      width: "30%",
-      height: "100vh",
-      left: "70%"
-    }}
-  />
-  <Appear>
-    <div
-      style={{
-        position: "absolute",
-        width: "30%",
-        top: "10%"
-      }}
-    >
-      <ul>
-        <li>
-          <h1>A -> B </h1>
-        </li>
-      </ul>
-    </div>
-    <div
-      style={{
-        position: "absolute",
-        width: "30%",
-        left: "70%",
-        top: "10%"
-      }}
-    >
-      <ul>
-        <li>
-          <h1>
-            a<sub>x</sub> -> a<sub>y</sub>
-          </h1>
-        </li>
-      </ul>
-    </div>
-    <div
-      style={{
-        position: "absolute",
-        width: "30%",
-        left: "70%",
-        top: "30%"
-      }}
-    >
-      <ul>
-        <li>
-          <h1>a(t)</h1>
-        </li>
-      </ul>
-    </div>
-    <div
-      style={{
-        position: "absolute",
-        width: "30%",
-        top: "30%"
-      }}
-    >
-      <ul>
-        <li>
-          <h1>aaa look here! 👀</h1>
-        </li>
-      </ul>
-    </div>
-  </Appear>
 </div>
 
 <Notes>
 
 - A -> B: when dataset A is replaced by dataset B (entering and exiting, redirect)
+
+</Notes>
+
+---
+
+## _When to add_ salt and spices?
+
+<div
+  style={{
+    width: "100vw",
+    height: "80vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  }}
+>
+  <div
+    style={{
+      backgroundImage: `url(${require("file-loader!./images/salt-shaker.png")})`,
+      backgroundSize: "contain",
+      width: "150px",
+      height: "150px",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      margin: "0.67em"
+    }}
+  />
+  <div
+    style={{
+      backgroundImage: `url(${require("file-loader!./images/a1_to_a2.gif")})`,
+      backgroundSize: "contain",
+      width: "60vw",
+      height: "60vw",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      margin: "0.67em"
+    }}
+  />
+</div>
+
+<Notes>
+
 - ai -> aj: but we an attribute of an element in dataset A changes, that is salt
+
+</Notes>
+
+---
+
+## _When to add_ salt and spices?
+
+<div
+  style={{
+    width: "100vw",
+    height: "80vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  }}
+>
+  <div
+    style={{
+      backgroundImage: `url(${require("file-loader!./images/salt-shaker.png")})`,
+      backgroundSize: "contain",
+      width: "150px",
+      height: "150px",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      margin: "0.67em"
+    }}
+  />
+  <div
+    style={{
+      backgroundImage: `url(${require("file-loader!./images/a_t.gif")})`,
+      backgroundSize: "contain",
+      width: "60vw",
+      height: "60vw",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      margin: "0.67em"
+    }}
+  />
+</div>
+
+<Notes>
+
 - a(t): same thing goes for when a is a function of time; time series data
+
+</Notes>
+
+---
+
+## _When to add_ salt and spices?
+
+<div
+  style={{
+    width: "100vw",
+    height: "80vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  }}
+>
+  <div
+    style={{
+      minWidth: "300px",
+      fontSize: "150px"
+    }}
+  >
+    🌶️
+  </div>
+  <div
+    style={{
+      backgroundImage: `url(${require("file-loader!./images/ah_look_here.gif")})`,
+      backgroundSize: "contain",
+      width: "60vw",
+      height: "60vw",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      margin: "0.67em"
+    }}
+  />
+</div>
+
+<Notes>
+
 - aaa look here: direct redirection - animation as narration / storytelling / explanation
-- should be at 9 min
 
 </Notes>
 
@@ -1293,9 +1343,9 @@ import App from "./components/App/App";
     <h1 style={{ textAlign: "center", fontSize: "4em" }}>
       Bon appetit! 🍽️{" "}
     </h1>
-    <h2>
+    <h1>
       @monica_woj
-    </h2>
+    </h1>
     <h2><a href={'https://www.reflectingreason.com/'} target="_blank">https://www.reflectingreason.com/</a></h2>
 
   </div>

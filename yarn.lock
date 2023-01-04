@@ -4885,7 +4885,7 @@ mdx-deck-code-surfer@^0.5.5:
     code-surfer "^0.5.5"
     memoize-one "^4.0.2"
 
-mdx-deck@^1.6.4:
+mdx-deck@^1.10.2:
   version "1.10.2"
   resolved "https://registry.yarnpkg.com/mdx-deck/-/mdx-deck-1.10.2.tgz#382b45671805e149ecba23163f14146813dd221c"
   integrity sha512-Qs9Ja7gIf7EYYnkX/FSAktETIt9f+D+pnMLXEbHz5OW/myI5FZMTiHsntMCs+oVjFF36gUJWuyM7dlkBZ2jXAg==
